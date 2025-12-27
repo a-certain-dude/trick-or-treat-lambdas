@@ -1,8 +1,11 @@
 fun main() {
-    trick()
-    treat()
-    greet("Josh")
-    val jose = funGreet("joseph")
+
+    val checkTrue = trickOrTreat(true)
+    checkTrue()
+    val checkFalse = trickOrTreat(false)
+    checkFalse()
+
+
 }
 
 /*
