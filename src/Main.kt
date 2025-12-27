@@ -8,11 +8,16 @@ fun main() {
 
 }
 
-/*
-fun trick () {
-    println("no treat")
-    // below converts it to a variable
-}*/
+fun trickOrTreat(isTrick: Boolean): () -> Unit {
+    return {
+        if (isTrick)
+            trick()
+        else
+            treat()
+    }
+
+}
+
 val trick = {
     println("No Treats")
 }
