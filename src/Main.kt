@@ -1,6 +1,8 @@
 fun main() {
     trick()
     treat()
+    greet("Josh")
+    val jose = funGreet("joseph")
 }
 
 /*
@@ -16,7 +18,13 @@ val treat = {
     println("Have a treat")
 }
 
+val greet: (String) -> Unit = { name: String ->
+    println("hello $name")
+}
 
+fun funGreet(name: String): String {
+    return "hello $name"
+}
 
 
 
