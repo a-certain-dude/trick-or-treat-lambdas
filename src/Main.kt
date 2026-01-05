@@ -1,19 +1,29 @@
 fun main() {
 
-    val checkTrue = trickOrTreat(true)
+    val trueTreat: (Int) -> String = { quantity ->
+        "$quantity true treats"
+    }
+
+    val falseTreat: (Int) -> String = {
+        "false treat"
+    }
+
+    val checkTrue = trickOrTreat(true, extraTreat = trueTreat)
+    val checkFalse = trickOrTreat(false, extraTreat = falseTreat)
     checkTrue()
-    val checkFalse = trickOrTreat(false)
     checkFalse()
-
-
 }
 
-fun trickOrTreat(isTrick: Boolean): () -> Unit {
+fun trickOrTreat(isTrick: Boolean, extraTreat: (times: Int) -> String): () -> Unit {
     return {
-        if (isTrick)
+        if (isTrick) {
+            println(extraTreat(2))
             trick()
-        else
+            println()
+        } else {
+            println(extraTreat(5))
             treat()
+        }
     }
 
 }
