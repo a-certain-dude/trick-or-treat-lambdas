@@ -14,7 +14,7 @@ fun main() {
     checkFalse()
     */
     val treatAll = trickOrTreat(isTrick = false,{ item-> "$item checkall" })
-    println(treatAll)
+    treatAll.invoke()
 }
 
 fun trickOrTreat(isTrick: Boolean, extraTreat: (times: Int) -> String): () -> Unit {
