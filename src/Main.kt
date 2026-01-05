@@ -1,6 +1,6 @@
 fun main() {
 
-    val trueTreat: (Int) -> String = { quantity ->
+    /*val trueTreat: (Int) -> String = { quantity ->
         "$quantity true treats"
     }
 
@@ -12,6 +12,9 @@ fun main() {
     val checkFalse = trickOrTreat(false, extraTreat = falseTreat)
     checkTrue()
     checkFalse()
+    */
+    val treatAll = trickOrTreat(isTrick = false,{ item-> "$item checkall" })
+    println(treatAll)
 }
 
 fun trickOrTreat(isTrick: Boolean, extraTreat: (times: Int) -> String): () -> Unit {
