@@ -13,7 +13,7 @@ fun main() {
     checkTrue()
     checkFalse()
     */
-    val treatAll = trickOrTreat(isTrick = false,{ item-> "$item checkall" })
+    val treatAll = trickOrTreat(isTrick = false) { item -> "$item checkall" }
     treatAll.invoke()
 }
 
